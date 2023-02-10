@@ -1,16 +1,16 @@
-package com.example.projectopalflower.ui.dashboard;
+package com.example.projectopalflower.ui.likes;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
+public class LikesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public DashboardViewModel() {
+    public LikesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        mText.setValue("This is likes fragment");
     }
 
     public LiveData<String> getText() {

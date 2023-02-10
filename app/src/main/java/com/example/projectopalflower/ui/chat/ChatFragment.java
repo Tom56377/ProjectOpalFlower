@@ -1,4 +1,4 @@
-package com.example.projectopalflower.ui.notifications;
+package com.example.projectopalflower.ui.chat;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,23 +10,23 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import com.example.projectopalflower.databinding.FragmentNotificationsBinding;
+import com.example.projectopalflower.databinding.FragmentChatBinding;
 
-public class NotificationsFragment extends Fragment{
+public class ChatFragment extends Fragment{
 
-    private NotificationsViewModel notificationsViewModel;
-    private FragmentNotificationsBinding binding;
+    private ChatViewModel chatViewModel;
+    private FragmentChatBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        chatViewModel =
+                new ViewModelProvider(this).get(ChatViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentChatBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textChat;
+        chatViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

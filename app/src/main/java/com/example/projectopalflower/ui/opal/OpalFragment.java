@@ -1,4 +1,4 @@
-package com.example.projectopalflower.ui.home;
+package com.example.projectopalflower.ui.opal;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,23 +10,23 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import com.example.projectopalflower.databinding.FragmentHomeBinding;
+import com.example.projectopalflower.databinding.FragmentOpalBinding;
 
-public class HomeFragment extends Fragment {
+public class OpalFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
-    private FragmentHomeBinding binding;
+    private OpalViewModel opalViewModel;
+    private FragmentOpalBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        opalViewModel =
+                new ViewModelProvider(this).get(OpalViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentOpalBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textOpal;
+        opalViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
