@@ -20,4 +20,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:gravity="center_horizontal"/>
+    <ImageView
+            android:src="@drawable/solid_snake"
+            android:layout_width="262dp"
+            android:layout_height="478dp" android:id="@+id/imageView2" tools:layout_editor_absoluteY="84dp"
+            tools:layout_editor_absoluteX="72dp" tools:ignore="MissingConstraints"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
