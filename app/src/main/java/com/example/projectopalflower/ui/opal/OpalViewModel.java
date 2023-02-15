@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel;
 public class OpalViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
+    
 
     public OpalViewModel() {
         mText = new MutableLiveData<>();
